@@ -1,0 +1,33 @@
+{
+    "name": "strayker/foundation",
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "illuminate/contracts": "^8.0|^9.0",
+        "illuminate/database": "^8.0|^9.0",
+        "illuminate/http": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0",
+        "illuminate/validation": "^8.0|^9.0",
+        "monolog/monolog": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Egorov",
+            "email": "strayker-wl@yandex.ru"
+        }
+    ],
+    "suggest": {
+        "illuminate/routing": "Required with laravel install (^8.0|^9.0).",
+        "laravel/lumen-framework": "Required with lumen install (^8.3|^9.0)."
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Strayker\\Foundation\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
