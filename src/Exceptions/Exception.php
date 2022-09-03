@@ -2,9 +2,9 @@
 
 namespace Strayker\Foundation\Exceptions;
 
-use Strayker\Foundation\Contracts\Exceptions\ExceptionContract;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
+use Strayker\Foundation\Contracts\Exceptions\ExceptionContract;
 use Throwable;
 
 class Exception extends \Exception implements ExceptionContract

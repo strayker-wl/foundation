@@ -2,9 +2,9 @@
 
 namespace Strayker\Foundation\Providers;
 
-use Strayker\Foundation\Contracts\Enums\SortFunctionEnum;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
+use Strayker\Foundation\Contracts\Enums\SortFunctionEnum;
 
 class ArrMacroServiceProvider extends ServiceProvider
 {
@@ -48,9 +48,9 @@ class ArrMacroServiceProvider extends ServiceProvider
      * Для функций SortFunctionEnum::UASORT, SortFunctionEnum::UKSORT и SortFunctionEnum::USORT требуется
      * передать коллбек
      *
+     * @return void
      * @see \Strayker\Foundation\Contracts\Enums\SortFunctionEnum
      *
-     * @return void
      */
     private function sortRecursiveMacro(): void
     {

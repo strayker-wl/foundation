@@ -2,11 +2,11 @@
 
 namespace Strayker\Foundation\Http\Presenters;
 
-use Illuminate\Http\Request;
-use Strayker\Foundation\Contracts\Http\Presenters\PresenterContract;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Strayker\Foundation\Contracts\Http\Presenters\PresenterContract;
 use Symfony\Component\HttpFoundation\Response;
 
 abstract class AbstractPresenter implements PresenterContract

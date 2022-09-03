@@ -2,8 +2,8 @@
 
 namespace Strayker\Foundation\Traits;
 
-use Strayker\Foundation\Exceptions\Rules\CantParseTokenToUuid;
 use Illuminate\Support\Str;
+use Strayker\Foundation\Exceptions\Rules\CantParseTokenToUuid;
 
 trait UniqueTokenFormer
 {

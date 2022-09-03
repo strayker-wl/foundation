@@ -2,10 +2,10 @@
 
 namespace Strayker\Foundation\Factories;
 
-use Strayker\Foundation\Contracts\Models\AbstractModelContract;
-use Strayker\Foundation\Traits\ModelNameResolver;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
+use Strayker\Foundation\Contracts\Models\AbstractModelContract;
+use Strayker\Foundation\Traits\ModelNameResolver;
 
 abstract class AbstractModelFactory extends Factory
 {

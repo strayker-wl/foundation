@@ -2,10 +2,10 @@
 
 namespace Strayker\Foundation\Traits;
 
-use Strayker\Foundation\Contracts\Models\AbstractModelContract;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
+use Strayker\Foundation\Contracts\Models\AbstractModelContract;
 
 trait ProvidesFactory
 {

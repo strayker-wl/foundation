@@ -1,7 +1,7 @@
 <?php
 
-use Strayker\Foundation\Loggers\Formatters;
 use Monolog\Handler\StreamHandler;
+use Strayker\Foundation\Loggers\Formatters;
 
 return [
     'channels' => [
