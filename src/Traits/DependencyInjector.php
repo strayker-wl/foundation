@@ -4,6 +4,13 @@ namespace Strayker\Foundation\Traits;
 
 trait DependencyInjector
 {
+    /**
+     * @param string $contract
+     * @param string $class
+     * @param array  $parameters
+     * @param bool   $isSingleton
+     * @return void
+     */
     private function bindClass(
         string $contract,
         string $class,

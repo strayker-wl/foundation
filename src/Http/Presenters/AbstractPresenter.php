@@ -2,10 +2,12 @@
 
 namespace Strayker\Foundation\Http\Presenters;
 
+use Illuminate\Http\Request;
 use Strayker\Foundation\Contracts\Http\Presenters\PresenterContract;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Http\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 abstract class AbstractPresenter implements PresenterContract
 {
@@ -171,10 +173,10 @@ abstract class AbstractPresenter implements PresenterContract
     /**
      * Prepare response object
      *
-     * @param \Illuminate\Http\Request $request
-     * @return JsonResponse
+     * @param Request $request
+     * @return Response
      */
-    public function toResponse($request): JsonResponse
+    public function toResponse($request): Response
     {
         return new JsonResponse($this->wrap($this->toArray()), $this->getHttpCode());
     }

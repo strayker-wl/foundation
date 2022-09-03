@@ -3,7 +3,7 @@
 namespace Strayker\Foundation\Http\Presenters\Primitive;
 
 use Strayker\Foundation\Http\Presenters\AbstractPresenter;
-use Illuminate\Http\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class EmptyResponsePresenter extends AbstractPresenter
 {
@@ -17,8 +17,8 @@ class EmptyResponsePresenter extends AbstractPresenter
         $this->data = null;
     }
 
-    public function toResponse($request): JsonResponse
+    public function toResponse($request): Response
     {
-        return new JsonResponse(status: $this->getHttpCode());
+        return new Response(status: $this->getHttpCode());
     }
 }

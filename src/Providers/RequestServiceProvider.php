@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
 class RequestServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap the application services.
+     * Регистрация валидатора
      *
      * @return void
      */

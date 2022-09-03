@@ -9,6 +9,12 @@ use Illuminate\Database\Eloquent\Model;
 
 trait ProvidesFactory
 {
+    /**
+     * @param string   $factoryClass
+     * @param array    $data
+     * @param int|null $amount
+     * @return Collection|AbstractModelContract|Model
+     */
     protected function createWithFactory(
         string $factoryClass,
         array  $data = [],
@@ -17,6 +23,12 @@ trait ProvidesFactory
         return $this->factory($factoryClass, $amount)->create($data);
     }
 
+    /**
+     * @param string   $factoryClass
+     * @param array    $data
+     * @param int|null $amount
+     * @return Collection|AbstractModelContract|Model
+     */
     protected function makeWithFactory(
         string $factoryClass,
         array  $data = [],
@@ -25,6 +37,11 @@ trait ProvidesFactory
         return $this->factory($factoryClass, $amount)->make($data);
     }
 
+    /**
+     * @param string   $factoryClass
+     * @param int|null $amount
+     * @return Factory
+     */
     private function factory(string $factoryClass, ?int $amount = null): Factory
     {
         /** @var Factory $factory */

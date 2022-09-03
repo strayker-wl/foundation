@@ -156,7 +156,7 @@ class Exception extends \Exception implements ExceptionContract
      */
     public function getReason(): string
     {
-        return $this->message;
+        return $this->reason;
     }
 
     /**

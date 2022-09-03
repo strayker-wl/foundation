@@ -10,7 +10,7 @@ class LoggingServiceProvider extends ServiceProvider
     use RecursiveConfigMerge;
 
     /**
-     * Bootstrap the application services.
+     * Конфигурация логирования
      *
      * @return void
      * @throws \Illuminate\Contracts\Container\BindingResolutionException

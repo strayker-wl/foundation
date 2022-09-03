@@ -20,6 +20,9 @@ class ArrMacroServiceProvider extends ServiceProvider
     }
 
     /**
+     * Сливает в массив $primaryArray значения массивов $secondaryArrays, если значения с тем же ключем
+     * в массиве $primaryArray не существует или null
+     *
      * @return void
      */
     private function mergeOnNullMacro(): void
@@ -40,6 +43,15 @@ class ArrMacroServiceProvider extends ServiceProvider
         );
     }
 
+    /**
+     * Сортирует переданный массив на основании заданной функции
+     * Для функций SortFunctionEnum::UASORT, SortFunctionEnum::UKSORT и SortFunctionEnum::USORT требуется
+     * передать коллбек
+     *
+     * @see \Strayker\Foundation\Contracts\Enums\SortFunctionEnum
+     *
+     * @return void
+     */
     private function sortRecursiveMacro(): void
     {
         Arr::macro(
@@ -64,6 +76,11 @@ class ArrMacroServiceProvider extends ServiceProvider
         );
     }
 
+    /**
+     * Удаляет из массива дублирующиеся значения и null
+     *
+     * @return void
+     */
     private function filterListMacro(): void
     {
         Arr::macro(
@@ -77,6 +94,17 @@ class ArrMacroServiceProvider extends ServiceProvider
         );
     }
 
+    /**
+     * Заменяет ключи массива на значение указанного ключа вложенного массива
+     * Если в параметр ключа передан callable - он будет использован для вычисления значения нового ключа
+     *
+     * Пример:
+     * $array = [0 => ['id' => 't0'], 1 => ['id' => 't1']];
+     * $array = Arr::keyBy($array, 'id');
+     * // ['t0' => ['id' => 't0'], 't1' => ['id' => 't1']]
+     *
+     * @return void
+     */
     private function keyByMacro(): void
     {
         Arr::macro(

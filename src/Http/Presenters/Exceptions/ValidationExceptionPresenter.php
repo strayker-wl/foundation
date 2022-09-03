@@ -7,6 +7,9 @@ use Illuminate\Contracts\Support\Jsonable;
 
 class ValidationExceptionPresenter extends ApiExceptionPresenter
 {
+    /**
+     * @inheritDoc
+     */
     protected function resolve(): void
     {
         $this->setBasicExceptionData();
