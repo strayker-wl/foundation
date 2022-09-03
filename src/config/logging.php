@@ -1,12 +1,11 @@
 <?php
 
-use Strayker\Foundation\Loggers\Formatters;
 use Monolog\Handler\StreamHandler;
+use Strayker\Foundation\Loggers\Formatters;
 
 return [
     'channels' => [
         'stack' => [
-            'level' => (string) env('APP_LOG_LEVEL', 'info'),
             'formatter' => Formatters\LineFormatter::class,
             'formatter_with' => [
                 'format' => (string) env('DEFAULT_LOG_FORMAT', Formatters\LineFormatter::FORMAT),
@@ -14,7 +13,6 @@ return [
             ],
         ],
         'single' => [
-            'level' => (string) env('APP_LOG_LEVEL', 'info'),
             'formatter' => Formatters\LineFormatter::class,
             'formatter_with' => [
                 'format' => (string) env('DEFAULT_LOG_FORMAT', Formatters\LineFormatter::FORMAT),
@@ -23,7 +21,7 @@ return [
         ],
         'monolog-stdout' => [
             'driver' => 'monolog',
-            'level' => (string) env('APP_LOG_LEVEL', 'info'),
+            'level' => (string) env('LOG_LEVEL', 'debug'),
             'handler' => StreamHandler::class,
             'with' => [
                 'stream' => 'php://stdout',

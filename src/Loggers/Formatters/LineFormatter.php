@@ -2,8 +2,8 @@
 
 namespace Strayker\Foundation\Loggers\Formatters;
 
-use Strayker\Foundation\Contracts\Loggers\Formatters\LineFormatterContract;
 use Monolog\Formatter\LineFormatter as MonologLineFormatter;
+use Strayker\Foundation\Contracts\Loggers\Formatters\LineFormatterContract;
 use Throwable;
 
 class LineFormatter extends MonologLineFormatter implements LineFormatterContract

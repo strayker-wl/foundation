@@ -2,13 +2,19 @@
 
 namespace Strayker\Foundation\Traits;
 
-use Strayker\Foundation\Contracts\Models\AbstractModelContract;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
+use Strayker\Foundation\Contracts\Models\AbstractModelContract;
 
 trait ProvidesFactory
 {
+    /**
+     * @param string   $factoryClass
+     * @param array    $data
+     * @param int|null $amount
+     * @return Collection|AbstractModelContract|Model
+     */
     protected function createWithFactory(
         string $factoryClass,
         array  $data = [],
@@ -17,6 +23,12 @@ trait ProvidesFactory
         return $this->factory($factoryClass, $amount)->create($data);
     }
 
+    /**
+     * @param string   $factoryClass
+     * @param array    $data
+     * @param int|null $amount
+     * @return Collection|AbstractModelContract|Model
+     */
     protected function makeWithFactory(
         string $factoryClass,
         array  $data = [],
@@ -25,6 +37,11 @@ trait ProvidesFactory
         return $this->factory($factoryClass, $amount)->make($data);
     }
 
+    /**
+     * @param string   $factoryClass
+     * @param int|null $amount
+     * @return Factory
+     */
     private function factory(string $factoryClass, ?int $amount = null): Factory
     {
         /** @var Factory $factory */

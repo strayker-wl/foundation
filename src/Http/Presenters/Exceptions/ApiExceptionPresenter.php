@@ -2,8 +2,8 @@
 
 namespace Strayker\Foundation\Http\Presenters\Exceptions;
 
-use Strayker\Foundation\Http\Presenters\AbstractPresenter;
 use Illuminate\Support\Arr;
+use Strayker\Foundation\Http\Presenters\AbstractPresenter;
 
 class ApiExceptionPresenter extends AbstractPresenter
 {

@@ -2,7 +2,6 @@
 
 namespace Strayker\Foundation\Http\Requests;
 
-use Strayker\Foundation\Exceptions\ValidationException;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
@@ -10,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Validation\ValidatesWhenResolvedTrait;
 use Illuminate\Validation\Validator;
+use Strayker\Foundation\Exceptions\ValidationException;
 
 class AbstractFormRequest extends Request implements ValidatesWhenResolved
 {

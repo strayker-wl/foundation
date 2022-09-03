@@ -2,15 +2,15 @@
 
 namespace Strayker\Foundation\Providers;
 
-use Strayker\Foundation\Traits\RecursiveConfigMerge;
 use Illuminate\Support\ServiceProvider;
+use Strayker\Foundation\Traits\RecursiveConfigMerge;
 
 class LoggingServiceProvider extends ServiceProvider
 {
     use RecursiveConfigMerge;
 
     /**
-     * Bootstrap the application services.
+     * Конфигурация логирования
      *
      * @return void
      * @throws \Illuminate\Contracts\Container\BindingResolutionException

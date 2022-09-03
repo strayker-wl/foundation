@@ -2,14 +2,14 @@
 
 namespace Strayker\Foundation\Providers;
 
-use Strayker\Foundation\Http\Requests\AbstractFormRequest;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 use Illuminate\Support\ServiceProvider;
+use Strayker\Foundation\Http\Requests\AbstractFormRequest;
 
 class RequestServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap the application services.
+     * Регистрация валидатора
      *
      * @return void
      */

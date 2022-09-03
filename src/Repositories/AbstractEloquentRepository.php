@@ -2,9 +2,9 @@
 
 namespace Strayker\Foundation\Repositories;
 
+use Illuminate\Database\Eloquent\Model;
 use Strayker\Foundation\Contracts\Models\AbstractEloquentModelContract;
 use Strayker\Foundation\Contracts\Repositories\AbstractEloquentRepositoryContract;
-use Illuminate\Database\Eloquent\Model;
 
 abstract class AbstractEloquentRepository extends AbstractRepository implements AbstractEloquentRepositoryContract
 {
